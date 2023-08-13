@@ -1,0 +1,146 @@
+/* .CardsPlay {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(50deg, purple, orange);
+}
+
+.card {
+  height: 300px;
+  width: 200px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 5px solid orange;
+  flex-shrink: 0;
+  border-radius: 8%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.card > img {
+  height: 100%;
+  width: fit-content;
+}
+
+.active {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  height: 350px;
+  width: 250px;
+}
+
+.active > img {
+  width: 100%;
+} */
+
+.btn {
+  background-image: linear-gradient(50deg, lightgrey, white);
+  border: none;
+  padding: 5px 5px 5px 5px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.CardsPlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 30px;
+  background: linear-gradient(50deg, purple, orange);
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px; /* Specify the perspective for 3D effect */
+  transition: transform 0.5s ease; /* Apply a smooth transition */
+  border: 5px solid orange;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  backface-visibility: hidden; /* Hide the backface during the flip */
+}
+
+.card.active {
+  height: 500px;
+  width: 400px;
+  transform: rotateY(0deg); /* Initial rotation for active card */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.card.left {
+  transform: rotateY(180deg); /* Rotate for left slide */
+  /* transform: rotateZ(45deg); Rotate the div 45 degrees along the Z-axis */
+}
+
+.card.right {
+  transform: rotateY(-180deg); /* Rotate for right slide */
+}
+
+/* @keyframes rotateAnimation {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes tiltAnimation-left {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: rotateX(15deg) rotateY(15deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+}
+
+@keyframes tiltAnimation-right {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: rotateX(-15deg) rotateY(-15deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+} */
+
+/* .card.left {
+  animation: tiltAnimation-left 3s linear infinite; //////////// Apply the animation
+}
+
+.card.right {
+  animation: tiltAnimation-right 3s linear infinite;  /////////// Apply the animation
+} */
+
+/* 
+.card.left,
+.card.right {
+  width: 200px;
+  height: 200px;
+  animation: rotateAnimation 3s linear infinite;  //////////Apply the animation 
+}
+
+.card.active {
+  animation: rotateAnimation 6s linear infinite; /////////////// Apply the animation
+} */
